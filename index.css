@@ -1,0 +1,63 @@
+.card {
+    width: 28%;
+    margin: 2%;
+    
+}
+
+.new-card {
+    width: 30%;
+    color: cyan;
+    background-color: orangered;
+}
+
+.cards-cont {
+    margin: 5%;
+}
+
+.form-outside {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 40em;
+   
+}
+
+.events-image {
+    width: 100px;
+    height: 50px;
+}
+
+.chip {
+    margin-left: 20px;
+    margin-right: 5px;
+    height: 80%;
+    font-size: 125%;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+
+  
+
+.btn-success {    background: linear-gradient(to right, #00cc00 0%, #009933 100%);
+}
+
+
+.btn-amber {background: linear-gradient(to right, #ff6600 0%, #ffcc00 100%);}
+
+.btn-danger {
+    background: linear-gradient(to right, #ff0000 0%, #ff5050 100%);
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #33ccff 0%, #3399ff 100%);
+}
+
+nav {
+    background: linear-gradient(to right, #6600ff 0%, #0099ff 100%);
+}
+
+.nav-item {
+    font-size: 20px;
+    margin: 8px;
+}
