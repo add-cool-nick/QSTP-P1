@@ -1,14 +1,10 @@
 .card {
     width: 28%;
-    margin: 2%;
-    
+    margin-left: 4%;
+    margin-bottom: 6%;
 }
 
-.new-card {
-    width: 30%;
-    color: cyan;
-    background-color: orangered;
-}
+
 
 .cards-cont {
     margin: 5%;
@@ -60,4 +56,21 @@ nav {
 .nav-item {
     font-size: 20px;
     margin: 8px;
+}
+
+@font-face {
+    font-family: audrey-bold;
+    src: url(font/Audrey/Audrey-Bold.otf);
+}
+
+
+
+
+h1 {
+    font-family: audrey-bold;
+    margin-top: 30px;
+    font-size: 50px;
+    background: linear-gradient(to bottom, #ff33cc 0%, #9933ff 100%);
+    padding-top: 15px;
+    padding-bottom: 3px;
 }

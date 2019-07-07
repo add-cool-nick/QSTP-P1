@@ -1,7 +1,7 @@
 
 
 
-
+var imageUrl;
 
 
 
@@ -19,7 +19,8 @@ var daysArr = new Array();
 
 // Add Event Button
 
-$(".listen").on("click", "#basicExampleModal .modal-dialog .modal-content .modal-footer .btn-success", function(){
+
+$(".listen").on("click", "#basicExampleModal .modal-dialog .modal-content .modal-footer .add-btn", function(){
 
 
 
@@ -73,17 +74,17 @@ $(".listen").on("click", "#basicExampleModal .modal-dialog .modal-content .modal
 
 
     for (var i=0 ; i<categoryArr.length ; i++) {
-        $(".categories-row-card").last().append(categoryArr[i]);
-        $(".categories-row-edit").last().append(categoryArr[i]);
+        $(".categories-row-card").last().append("<h5>"+categoryArr[i]+"</h5><hr/>");
+        $("#categories-row-edit").last().append("<div class='chip chip-lg aqua-gradient white-text'>"+categoryArr[i]+"</div>");
     }
 
 
     for (var i=0 ; i<daysArr.length ; i++) {
-        $(".days-row-card").last().append(daysArr[i]);
+        $(".days-row-card").last().append("<h5>"+daysArr[i]+"</h5><hr/>");
+        $("#days-row-edit").last().append("<div class='chip chip-lg aqua-gradient white-text'>"+daysArr[i]+"</div>");
     }
 
-    categoryArr.length = 0;
-    daysArr.length = 0;
+    
 
 
     $("#categories-row").html("");
@@ -91,15 +92,24 @@ $(".listen").on("click", "#basicExampleModal .modal-dialog .modal-content .modal
 
 
 
-    $("#event-name-edit").last().val(eventName);
-    $("#event-type-edit").last().val(eventType);
-    $("#event-desc-edit").last().val(eventDesc);
-    $("rulebook.edit").last().val(rulebook);
 
+
+    
+    categoryArr.length = 0;
+    daysArr.length = 0;
+
+
+    $(".card-img-top").last().attr("src", imageUrl);
+
+    imageUrl = "https://mdbootstrap.com/img/Photos/Others/images/43.jpg";
 
 
 
     toastr.success('Event created successfully');
+
+
+
+    
 
 
 
@@ -119,10 +129,32 @@ $(".listen").on("click", "#basicExampleModal .modal-dialog .modal-content .modal
 $(".listen").on("click", ".card-edit", function(){
     console.log("Edit button clicked");
 
-    console.log($(this).parent().parent().find("#event-name-edit").html());
+    var eventName = $(this).parent().parent().find("#event-name-edit").val();
+
+    console.log(eventName);
+
 
 })
 
+
+
+
+
+
+
+
+// Save button on edit modal
+
+$(".listen").on("click", ".save-btn-edit", function(){
+
+    console.log("save on edit modal pressed");
+
+    $(this).parent().parent().parent().parent().parent().parent().parent().find(".card-img-top").last().attr("src", imageUrl);  
+
+
+})
+
+// End of save on edit modal
 
 
 
@@ -135,7 +167,7 @@ $(".listen").on("click", ".add-category", function(){
 
     var newCategory = $(".new-category").val();
 
-    categoryArr.push("<h5>" + newCategory + "</h5><hr/>");
+    categoryArr.push(newCategory);
 
     console.log("Category is " + newCategory);
 
@@ -152,6 +184,7 @@ $(".listen").on("click", ".add-category", function(){
     $(".new-category").val("");
 
 
+    
 
 })
 
@@ -177,10 +210,10 @@ $(".listen").on("click", ".add-day", function(){
     newDay += "    ";
     newDay += $(".new-venue").val();
 
-    daysArr.push("<h5>" + newDay + "</h5><hr/>");
+    daysArr.push(newDay);
 
 
-    var text = "<div class='chip chip-lg aqua-gradient white-text'>"+newDay+"</div>"
+    var text = "<div class='chip chip-lg aqua-gradient white-text'>"+newDay+"</div>";
 
     $("#days-row").append(text);
 
@@ -236,10 +269,28 @@ $("form").on("submit", event => {
     
 
 
-    window.location.href = "index.html";
+    window.location.href = "home.html";
 });
+
 // End of Sign Up button on form page
 
+
+
+
+
+// Image upload Button
+
+
+$(".img-upload").on("click", function(){
+
+    imageUrl = $(this).parent().find(".image-url").val();
+
+    $(this).parent().find(".image-url").val("");
+
+    console.log(imageUrl);
+
+    
+});
 
 
 

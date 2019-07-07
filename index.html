@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+
 <html>
 
 <head>
+    <title>Sign Up</title>
 
-    <title>QSTP Project 1</title>
+
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -15,458 +16,121 @@
     <link rel="stylesheet" href="index.css">
 
 
-    
-
-
-
 
 </head>
 
-<body class="listen">
+
+
+<body>
+    <!-- Material form register -->
+    <div class="card form-outside">
+
+        <h5 class="card-header info-color white-text text-center py-4">
+            <strong>Sign up</strong>
+        </h5>
+
+        <!--Card content-->
+        <div class="card-body px-lg-5 pt-0">
+
+            <!-- Form -->
+            <form class="text-center" id="signup-form" style="color: #757575;">
+
+                <div class="form-row">
+                    <div class="col">
+                        <!-- First name -->
+                        <div class="md-form">
+                            <input type="text" id="materialRegisterFormFirstName" class="form-control" required>
+                            <label for="materialRegisterFormFirstName">First name</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <!-- Last name -->
+                        <div class="md-form">
+                            <input type="text" id="materialRegisterFormLastName" class="form-control"
+                            required
+                            >
+                            <label for="materialRegisterFormLastName">Last name</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-mail -->
+                <div class="md-form mt-0">
+                    <input type="email" id="materialRegisterFormEmail" class="form-control"
+                    required
+                    >
+                    <label for="materialRegisterFormEmail">E-mail</label>
+                </div>
+
+                <!-- Password -->
+                <div class="md-form">
+                    <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
+                    <label for="materialRegisterFormPassword">Password</label>
+                    <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4"
+                    required
+                    
+                    >
+                        At least 10 characters
+                    </small>
+                </div>
+
+                <!-- Phone number -->
+                <div class="md-form">
+                    <input type="text" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock">
+                    <label for="materialRegisterFormPhone"
+                    
+                    required
+                    >Phone number</label>
+                    
+                </div>
 
 
 
+                <!-- Sign up button -->
+                <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" id="submit-btn">Sign in</button>
 
-    <!-- Navbar on homepage -->
-    <!-- //////// -->
-    <nav class="navbar navbar-expand-lg navbar-dark indigo">
-        <a class="navbar-brand" href="#"><img src="img/events1.png" class="events-image"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Another Page</a>
-            </li>
-          </ul>
-          <!-- <span class="navbar-text white-text"> -->
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link">About us</a>
-              </li>
-            </ul>
-          <!-- </span> -->
+                
+
+                <hr>
+
+                <!-- Terms of service -->
+                <p>By clicking
+                    <em>Sign up</em> you agree to our
+                    <a href="" target="">terms of service</a>
+
+            </form>
+            <!-- Form -->
+
         </div>
-      </nav>
-    <!-- /////// -->
-    <!-- /////// -->
-    <!-- /////// -->
-    
 
-
-
-
-
-
-
-
-    <h1 class="text-center">Timeline</h1>
-
-
-
-
-
-
-    <!-- Button trigger modal -->
-    <div class="text-center">
-        <button type="button" class="btn btn-primary btn-rounded" data-toggle="modal" data-target="#basicExampleModal">
-            ADD NEW EVENT
-        </button>
     </div>
-      
+    <!-- Material form register -->
 
-      <!-- Modal -->
-      <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Add New Event</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
 
 
 
-                    <!-- Event Name -->
-                    <div class="md-form form-lg">
-                        <label for="event-name-add">Event Name</label>
-                        <input type="text" id="event-name-add" class="form-control event-name">
-                        
-                    </div>
 
-                    
-                    <!-- Event Type -->
-                    <div class="md-form form-lg">
-                            <label for="event-type-add">Event Type</label>
-                            <input type="text" id="event-type-add" class="form-control event-type">
-                            
-                    </div>
 
 
 
-                    
-                    <!-- Event Description -->
-                    <div class="md-form">
-                        <textarea id="textarea-char-counter" class="form-control md-textarea event-description" length="120" rows="3"></textarea>
-                        <label for="textarea-char-counter">Event Description</label>
-                    </div>
 
 
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="lib/mdb.min.js"></script>
+        <!-- Index JS -->
+        <script type="text/javascript" src="index.js"></script>
 
-                    <!-- Rulebook Url -->
-                    <div class="md-form form-lg">
-                            <input type="text" id="rulebook-add" class="form-control rulebook-url">
-                            <label for="rulebook-add">Rulebook Url</label>
-                    </div>
 
-
-                    
-
-                    <!-- Category -->
-                    <h3>Category</h3>
-
-
-                    <!-- New Category -->
-                    <div class="md-form form-lg row">
-                        <div class="col-lg-2">
-                              <button class="btn btn-success btn-md add-category"><i class="fas fa-plus"></i></button>
-                          </div>
-                        <div class="col-lg-10">
-                            <input type="text" id="category-add" class="form-control new-category">
-                            <label for="category-add">New Category</label>
-                        </div>             
-                    </div>
-
-
-                    
-
-
-                    <div class="row">
-                      <div id="categories-row">
-                      
-
-
-
-                      </div>
-                    </div>
-
-
-
-
-
-
-
-                    <!-- Days -->
-                    <h3>Days</h3>
-
-
-
-                    <!-- Add Day -->
-
-                    <div class="md-form form-lg row">
-                      <div class="col-lg-2">
-                          <button class="btn btn-success btn-md add-day"><i class="fas fa-plus"></i></button>
-                      </div>
-                      <!-- Day -->
-                      <div class="col-lg-2">
-                          <input type="text" id="day-add" class="form-control new-day">
-                          <label for="day-add">Day</label>
-                      </div>  
-                      <!-- Session    -->
-                      <div class="col-lg-3">
-                        <input type="text" id="session-add" class="form-control new-session">
-                        <label for="session-add">Session</label>
-                      </div>  
-                      <!-- Time  -->
-                      <div class="col-lg-2">
-                        <input type="text" id="time-add" class="form-control new-time">
-                        <label for="time-add">Time</label>
-                      </div>
-                      <!-- Venue -->
-                      <div class="col-lg-3">
-                        <input type="text" id="venue-add" class="form-control new-venue">
-                        <label for="venue-add">Venue</label>
-                      </div>     
-                    </div>
-
-
-
-
-                    <div class="row">
-                      <div id="days-row">
-                      
-
-
-
-                      </div>
-                    </div>
-                          
-
-
-
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-info">SELECT IMAGE</button>
-              <button type="button" class="btn btn-success" data-dismiss="modal">SAVE EVENT</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="cards-cont">
-        <div class="row" id="card-row">
-
-
-
-            <!-- Card -->
-            <!-- ////// -->
-            <!-- ////// -->
-            <!-- ////// -->
-            <div class="card d-none">
-
-                <!-- Card image -->
-                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap">
-              
-                <!-- Card content -->
-                <div class="card-body">
-              
-                  <!-- Title -->
-                  <h3 class="card-title text-center"><a><span class="event-title-card">Event Name</span></a></h3><hr/>
-                  <h4 class="text-center"><span class="event-type-card">Event Type</span></h4>
-                  <hr/>
-                  <!-- Text -->
-                  <p class="card-text text-center"><span class="event-description-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
-                  </p><hr/>
-
-
-                  <div class="categories-row-card">
-                        <h4>Categories :</h4><hr/>
-
-                        
-
-                  </div>
-
-
-                  <div class="days-row-card">
-                        <h4>Days :</h4><hr/>
-
-                        
-
-                  </div>
-
-                  <h5>Rulebook URL : <span class="event-rulebook-url-card">www.example.com</span></h5><hr/>
-                  
-
-                  <!-- Button -->
-                  <div class="card-buttons text-center">
-                      <a class="btn btn-amber card-button card-edit" data-toggle="modal" data-target="#basicExampleModal1"><i class="far fa-edit"></i> EDIT</a>
-                      <a class="btn btn-danger card-delete"><i class="far fa-trash-alt"></i> DELETE</a>
-
-
-
-
-
-
-                          <!--Edit Modal -->
-                          <!-- ////// -->
-                          <!-- ////// -->
-                          <!-- ///// -->
-                          <!-- ////// -->
-                                <div class="modal fade" id="basicExampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-lg" role="document">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Edit Event</h5>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                      </button>
-                                    </div>
-                                    <div class="modal-body">
-
-
-
-                                            <!-- Event Name -->
-                                            <div class="md-form form-lg">
-                                                <input type="text" id="event-name-edit" class="form-control event-name">
-                                                <label for="event-name-edit">Event Name</label>
-                                            </div>
-
-                                            
-                                            <!-- Event Type -->
-                                            <div class="md-form form-lg">
-                                                    <input type="text" id="event-type-edit" class="form-control event-type">
-                                                    <label for="event-type-edit">Event Type</label>
-                                            </div>
-
-
-
-                                            
-                                            <!-- Event Description -->
-                                            <div class="md-form">
-                                                <textarea id="event-desc-edit" class="form-control md-textarea event-description" length="120" rows="3"></textarea>
-                                                <label for="event-desc-edit">Event Description</label>
-                                            </div>
-
-
-
-                                            <!-- Rulebook Url -->
-                                            <div class="md-form form-lg">
-                                                    <input type="text" id="rulebook-edit" class="form-control rulebook-url">
-                                                    <label for="rulebook-edit">Rulebook Url</label>
-                                            </div>
-
-
-                                            
-
-                                            <!-- Category -->
-                                            <h3>Category</h3>
-
-
-                                            <!-- New Category -->
-                                            <div class="md-form form-lg row">
-                                                <div class="col-lg-2">
-                                                      <button class="btn btn-success btn-md add-category"><i class="fas fa-plus"></i></button>
-                                                  </div>
-                                                <div class="col-lg-10">
-                                                    <input type="text" id="category-edit" class="form-control new-category">
-                                                    <label for="category-edit">New Category</label>
-                                                </div>             
-                                            </div>
-
-
-                                            
-
-
-                                            <div class="row">
-                                              <div id="categories-row-edit">
-                                              
-
-
-
-                                              </div>
-                                            </div>
-
-
-
-
-
-
-
-                                            <!-- Days -->
-                                            <h3>Days</h3>
-
-
-
-                                            <!-- Add Day -->
-
-                                            <div class="md-form form-lg row">
-                                              <div class="col-lg-2">
-                                                  <button class="btn btn-success btn-md add-day"><i class="fas fa-plus"></i></button>
-                                              </div>
-                                              <!-- Day -->
-                                              <div class="col-lg-2">
-                                                  <input type="text" id="day-edit" class="form-control new-day">
-                                                  <label for="day-edit">Day</label>
-                                              </div>  
-                                              <!-- Session    -->
-                                              <div class="col-lg-3">
-                                                <input type="text" id="session-edit" class="form-control new-session">
-                                                <label for="session-edit">Session</label>
-                                              </div>  
-                                              <!-- Time  -->
-                                              <div class="col-lg-2">
-                                                <input type="text" id="time-edit" class="form-control new-time">
-                                                <label for="time-edit">Time</label>
-                                              </div>
-                                              <!-- Venue -->
-                                              <div class="col-lg-3">
-                                                <input type="text" id="venue-edit" class="form-control new-venue">
-                                                <label for="venue-edit">Venue</label>
-                                              </div>     
-                                            </div>
-
-
-
-
-                                            <div class="row">
-                                              <div id="days-row">
-                                              
-
-
-
-                                              </div>
-                                            </div>
-                                                  
-
-
-
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-info">SELECT IMAGE</button>
-                                      <button type="button" class="btn btn-success" data-dismiss="modal">SAVE EVENT</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <!-- End of Edit Modal -->
-                              <!-- ////// -->
-                              <!-- ////// -->
-                              <!-- ////// -->
-                              <!-- ////// -->
-
-
-
-                      </div>
-                                        
-                    </div>
-                                        
-                  </div>
-
-                <!-- Card -->
-
-
-        </div>
-
-
-
-      </div>
-      
-
-
-
-
-
-
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="lib/mdb.min.js"></script>
-    <!-- Index JS -->
-    <script type="text/javascript" src="index.js"></script>
 
 
 </body>
+
 
 
 </html>
