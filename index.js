@@ -1,5 +1,5 @@
-console.log("windows width is " + document.width);
 
+// For FAB
 if (window.innerWidth < 1000) {
     $(".add-new-event").addClass("d-none");
 }
