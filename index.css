@@ -63,6 +63,10 @@ nav {
     src: url(font/Audrey/Audrey-Bold.otf);
 }
 
+@font-face {
+    font-family: glamor-bold;
+    src: url(font/glamor/Glamor-Bold.ttf);
+}
 
 
 
@@ -73,4 +77,9 @@ h1 {
     background: linear-gradient(to bottom, #ff33cc 0%, #9933ff 100%);
     padding-top: 15px;
     padding-bottom: 3px;
+}
+
+.head-font {
+    font-family: glamor-bold;
+    font-size: 25px;
 }

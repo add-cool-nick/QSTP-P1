@@ -1,3 +1,13 @@
+console.log("windows width is " + document.width);
+
+if (window.innerWidth < 1000) {
+    $(".add-new-event").addClass("d-none");
+}
+
+else {
+    $(".plus-btn-top").addClass("d-none");
+}
+
 
 
 
